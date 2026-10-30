@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Testimonio — Repostería Personalizada | Cali, Colombia</title>
+  <meta name="description" content="Alta repostería artesanal fundada por Isabella y Adriana en Cali. Donuts de diseño, ramos de donuts de lujo, tiramisú italiano por kilos y eventos inolvidables.">
+  <meta name="keywords" content="Dulce Testimonio, Reposteria Cali, Donuts Cali, Ramos de Donuts, Tiramisu Cali, Postres personalizados Cali, Isabella y Adriana">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dulce Testimonio — Repostería Personalizada | Cali">
+  <meta property="og:description" content="Donuts de diseño, ramos artesanales, tiramisú italiano por kilos y mesas de dulces inolvidables en Cali.">
+  <meta property="og:image" content="assets/hero_pastry_art.jpg">
+
+  <!-- Google Fonts: Luxury Editorial Serif, Romantic Script & Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. STICKY GLASSMORPHISM NAVBAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      
+      <!-- Monogram & Brand Logo -->
+      <a href="#inicio" class="brand-logo" aria-label="Dulce Testimonio Inicio">
+        <div class="monogram-badge">DT</div>
+        <div class="brand-text">
+          <span class="brand-title">Dulce Testimonio</span>
+          <span class="brand-sub" data-i18n="nav.city">Repostería • Cali</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#inicio" class="nav-link active" data-i18n="nav.home">Inicio</a>
+        <a href="#menu" class="nav-link" data-i18n="nav.menu">Menú</a>
+        <a href="#galeria" class="nav-link" data-i18n="nav.events">Eventos</a>
+        <a href="#historia" class="nav-link" data-i18n="nav.chefs">Chef (Isabella & Adriana)</a>
+        <a href="#cotizador" class="nav-link" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <!-- Right Action Group -->
+      <div class="nav-actions">
+        <!-- Bilingual Toggle (ES | EN) -->
+        <div class="lang-toggle-wrapper" role="group" aria-label="Seleccionar idioma">
+          <button class="lang-btn active" id="btnLangEs" onclick="setLanguage('es')">ES</button>
+          <button class="lang-btn" id="btnLangEn" onclick="setLanguage('en')">EN</button>
+        </div>
+
+        <!-- Quote Pill CTA Button -->
+        <a href="#cotizador" class="btn btn-primary btn-sm" data-i18n="nav.cta">Cotiza Ya</a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Abrir menú" onclick="toggleMobileNav()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. HERO SECTION (MELT MADRID + ORIGINAL BANNER SYNTHESIS)
+       ========================================================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-media-wrapper">
+      <!-- Muted looping video with fallback image -->
+      <video class="hero-video" autoplay loop muted playsinline poster="assets/hero_pastry_art.jpg" id="heroVideo">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-decorating-a-donut-with-chocolate-42617-large.mp4" type="video/mp4">
+        <!-- High-res fallback image if video stream is unavailable -->
+        <img src="assets/hero_pastry_art.jpg" alt="Alta Repostería Artesanal Glaseada con Flores" class="hero-fallback-img">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <!-- Modernized Luxury Double-Bordered Framed Box -->
+      <div class="hero-frame">
+        <div class="hero-monogram">Dulce Testimonio</div>
+        <h1 class="hero-title">Haute Patisserie <span>Artesanal</span></h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Repostería Personalizada • Cali, Colombia</p>
+        <p class="hero-description" data-i18n="hero.description">
+          El amor incondicional de una madre y la visión innovadora de una hija se funden en creaciones que transforman cada momento en una experiencia sensorial inolvidable.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#cotizador" class="btn btn-gold btn-lg" data-i18n="hero.ctaPrimary">Cotiza Ya</a>
+          <a href="#menu" class="btn btn-secondary btn-lg" data-i18n="hero.ctaSecondary">Ver Menú</a>
+        </div>
+
+        <!-- Micro stats strip -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label" data-i18n="hero.stat1">Hecho a Mano</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Cali</span>
+            <span class="stat-label" data-i18n="hero.stat2">Valle del Cauca</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Haute</span>
+            <span class="stat-label" data-i18n="hero.stat3">Diseño de Autor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. INFINITE MARQUEE TICKER (SOCIAL GOODS CLUB STYLE)
+       ========================================================================== -->
+  <section class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>DONUTS DE DISEÑO</span>
+        <span class="marquee-separator">✦</span>
+        <span>RAMOS DE DONUTS</span>
+        <span class="marquee-separator">✦</span>
+        <span>TIRAMISÚ ITALIANO POR KILOS</span>
+        <span class="marquee-separator">✦</span>
+        <span>MESAS DE DULCES Y EVENTOS</span>
+        <span class="marquee-separator">✦</span>
+        <span>HECHO CON AMOR EN CALI</span>
+        <span class="marquee-separator">✦</span>
+      </div>
+      <div class="marquee-content">
+        <span>DONUTS DE DISEÑO</span>
+        <span class="marquee-separator">✦</span>
+        <span>RAMOS DE DONUTS</span>
+        <span class="marquee-separator">✦</span>
+        <span>TIRAMISÚ ITALIANO POR KILOS</span>
+        <span class="marquee-separator">✦</span>
+        <span>MESAS DE DULCES Y EVENTOS</span>
+        <span class="marquee-separator">✦</span>
+        <span>HECHO CON AMOR EN CALI</span>
+        <span class="marquee-separator">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. 3-PILLAR FEATURE STRIP ("DONUTS... DE DISEÑO... PERSONALIZADO")
+       ========================================================================== -->
+  <section class="pillars-section section-pad" id="pilares">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow" data-i18n="pillars.eyebrow">Nuestra Esencia</span>
+        <h2 class="section-title" data-i18n="pillars.title">El Arte de Regalar Dulzura</h2>
+        <p class="section-subtitle" data-i18n="pillars.subtitle">Tres expresiones de nuestra pasión pastelera creadas para sorprender los sentidos en cada detalle.</p>
+      </div>
+
+      <div class="pillars-grid">
+        
+        <!-- Pillar 1: Donuts... -->
+        <article class="pillar-card">
+          <div class="pillar-image-wrap">
+            <img src="assets/donut_bouquet.jpg" alt="Ramos de Donuts Artesanales de Dulce Testimonio" loading="lazy">
+            <span class="pillar-badge-num">01</span>
+          </div>
+          <div class="pillar-body">
+            <span class="pillar-step" data-i18n="pillars.p1Step">Pilar 01</span>
+            <h3 class="pillar-title" data-i18n="pillars.p1Title">Donuts...</h3>
+            <p class="pillar-desc" data-i18n="pillars.p1Desc">
+              Ramos de donuts artesanales presentados como flores de alta costura, envueltos en papel satinado lila y detalles florales con gypsophila.
+            </p>
+            <a href="#menu" class="pillar-link" data-i18n="pillars.explore">Explorar Ramos &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Pillar 2: ...De Diseño... -->
+        <article class="pillar-card">
+          <div class="pillar-image-wrap">
+            <img src="assets/gift_box_tray.jpg" alt="Bandejas de Desayuno y Cajas de Regalo con Donuts" loading="lazy">
+            <span class="pillar-badge-num">02</span>
+          </div>
+          <div class="pillar-body">
+            <span class="pillar-step" data-i18n="pillars.p2Step">Pilar 02</span>
+            <h3 class="pillar-title" data-i18n="pillars.p2Title">...De Diseño...</h3>
+            <p class="pillar-desc" data-i18n="pillars.p2Desc">
+              Cajas de regalo y bandejas de desayuno con maridaje de vino espumoso, tazas de cerámica artesanal y flores frescas ("I Love Mom" & ocasiones especiales).
+            </p>
+            <a href="#menu" class="pillar-link" data-i18n="pillars.explore">Ver Cajas de Regalo &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Pillar 3: ...Personalizado -->
+        <article class="pillar-card">
+          <div class="pillar-image-wrap">
+            <img src="assets/floral_donut_box.jpg" alt="Cajas Florales Alargadas con Eucalipto y Velo de Novia" loading="lazy">
+            <span class="pillar-badge-num">03</span>
+          </div>
+          <div class="pillar-body">
+            <span class="pillar-step" data-i18n="pillars.p3Step">Pilar 03</span>
+            <h3 class="pillar-title" data-i18n="pillars.p3Title">...Personalizado</h3>
+            <p class="pillar-desc" data-i18n="pillars.p3Desc">
+              Cajas alargadas estilo floristería parisina con baby's breath (gypsophila) y ramas de eucalipto para aniversarios, bodas y regalos inolvidables.
+            </p>
+            <a href="#cotizador" class="pillar-link" data-i18n="pillars.explore">Cotizar a Medida &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. "NUESTROS DULCES" — INTERACTIVE MENU SECTION (DONUTELIER STYLE)
+       ========================================================================== -->
+  <section class="menu-section section-pad" id="menu">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="text-center">
+        <span class="eyebrow" data-i18n="menu.eyebrow">Haute Patisserie</span>
+        <h2 class="section-title" data-i18n="menu.title">Nuestros Donuts & Postres</h2>
+        <p class="section-subtitle" data-i18n="menu.subtitle">
+          Nacidos del amor de una madre y la innovación de una hija, perfectos para traer dulzura a tu vida... ¡pero cuidado, causan adicción!
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="menu-filter-nav" role="tablist">
+        <button class="filter-tab active" data-filter="all" onclick="filterMenu('all', this)" data-i18n="menu.tabs.all">Todos</button>
+        <button class="filter-tab" data-filter="cajas" onclick="filterMenu('cajas', this)" data-i18n="menu.tabs.boxes">Cajas de Donuts</button>
+        <button class="filter-tab" data-filter="ramos" onclick="filterMenu('ramos', this)" data-i18n="menu.tabs.bouquets">Ramos & Regalos</button>
+        <button class="filter-tab" data-filter="tiramisu" onclick="filterMenu('tiramisu', this)" data-i18n="menu.tabs.tiramisu">Tiramisú Italiano</button>
+        <button class="filter-tab" data-filter="eventos" onclick="filterMenu('eventos', this)" data-i18n="menu.tabs.events">Eventos & Tortas</button>
+      </div>
+
+      <!-- FEATURED SPOTLIGHT 1: DONUTS CLOUD BOX -->
+      <div class="spotlight-card" id="spotlightCloudBox">
+        <div class="spotlight-layout">
+          
+          <div class="spotlight-image-box">
+            <span class="badge badge-gold spotlight-badge-float" data-i18n="menu.spotlight1.badge">Edición Haute Patisserie</span>
+            <img src="assets/donuts_cloud_box.jpg" alt="Donuts Cloud Box 12 unidades con lazos decorativos" id="spotlightMainImg" loading="lazy">
+          </div>
+
+          <div class="spotlight-info">
+            <span class="eyebrow" data-i18n="menu.spotlight1.eyebrow">Firma de la Casa</span>
+            <h3 class="section-title" style="font-size: 2.2rem;" data-i18n="menu.spotlight1.title">Donuts Cloud Box</h3>
+            <p class="spotlight-tagline" data-i18n="menu.spotlight1.tagline">
+              "¿Alguna vez comiste una nube? ¿No? Entonces debes probar estos donuts. Para una ocasión especial o para darte un gusto."
+            </p>
+            <p style="font-size: 0.9375rem; color: var(--text-secondary); margin-bottom: 18px;" data-i18n="menu.spotlight1.desc">
+              Doce piezas de masa brioche artesanal fermentada con lentitud, decoradas a mano con moños de pastillaje bicolor, glaseados espejados y capacillos finos.
+            </p>
+
+            <!-- Interactive Flavor Selector Pills -->
+            <div class="flavor-selector-box">
+              <div class="flavor-selector-title">
+                <span data-i18n="menu.flavorTitle">Selecciona y Explora Sabores:</span>
+                <span style="font-size: 0.6875rem; color: var(--accent-gold); font-weight: 600;" data-i18n="menu.clickPreview">Clic para previsualizar</span>
+              </div>
+              <div class="flavor-pills-grid">
+                <button class="flavor-pill active" onclick="selectCloudFlavor(1, this)">
+                  <span class="flavor-pill-num">Sabor 1</span>
+                  <span class="flavor-pill-name" id="labelFlavor1">Glaseado Clásico</span>
+                </button>
+                <button class="flavor-pill" onclick="selectCloudFlavor(2, this)">
+                  <span class="flavor-pill-num">Sabor 2</span>
+                  <span class="flavor-pill-name" id="labelFlavor2">Chocolate Belga</span>
+                </button>
+                <button class="flavor-pill" onclick="selectCloudFlavor(3, this)">
+                  <span class="flavor-pill-num">Sabor 3</span>
+                  <span class="flavor-pill-name" id="labelFlavor3">Frutos Rojos & Pistacho</span>
+                </button>
+                <button class="flavor-pill" onclick="selectCloudFlavor(4, this)">
+                  <span class="flavor-pill-num">Sabor 4</span>
+                  <span class="flavor-pill-name" id="labelFlavor4">Edición Especial ❤️</span>
+                </button>
+              </div>
+
+              <!-- Dynamic Flavor Description Preview -->
+              <div class="active-flavor-preview" id="flavorPreviewText">
+                <span style="font-size: 1.1rem;">✨</span>
+                <span><strong>Glaseado Clásico de Vainilla Bourbon:</strong> Baño sedoso con notas cálidas de vainilla pura y toque de azúcar glass.</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+              <a href="#cotizador" class="btn btn-primary" onclick="preselectQuote('Caja de Donuts x12 (Cloud Box)')" data-i18n="menu.orderBox">Personalizar Esta Caja</a>
+              <button class="btn btn-secondary btn-sm" onclick="openAnatomyModal('cloud_box')" data-i18n="menu.viewAnatomy">Ver Anatomía & Ficha</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FEATURED SPOTLIGHT 2: TIRAMISÚ THE ITALIAN WAY -->
+      <div class="tiramisu-card" id="spotlightTiramisu">
+        <div class="spotlight-layout">
+          
+          <div class="tiramisu-info">
+            <span class="badge badge-gold" data-i18n="menu.tiramisu.badge">Pedidos Por Kilos</span>
+            <h3 class="section-title" style="margin-top: 14px;" data-i18n="menu.tiramisu.title">Tiramisú: The Italian Way</h3>
+            
+            <p class="tiramisu-story" data-i18n="menu.tiramisu.story">
+              "Durante mi viaje a Italia me enamoré de este postre y tomé una clase completa con un chef pastelero sobre cómo hacerlo a la manera original italiana: café de moka, savoiardi, mascarpone, huevos, cacao y muchísimo amor. El resultado es increíble. Los pedidos se hacen por kilos y, créeme, nunca es suficiente."
+            </p>
+
+            <div class="tiramisu-ingredients-strip">
+              <span class="tiramisu-badge">☕ Café Moka Italiano</span>
+              <span class="tiramisu-badge">🧀 Mascarpone 100% Auténtico</span>
+              <span class="tiramisu-badge">🥖 Savoiardi Artesanales</span>
+              <span class="tiramisu-badge">🍫 Cacao Puro Valrhona</span>
+            </div>
+
+            <!-- Kilo Selector Pills -->
+            <div style="margin-bottom: 12px; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-gold);" data-i18n="menu.tiramisu.kilos">
+              Selecciona Tamaño por Kilos:
+            </div>
+            <div class="kilo-selector">
+              <button class="kilo-btn active" onclick="selectTiramisuKilos(1, this)">1 Kilo (6–8 porciones)</button>
+              <button class="kilo-btn" onclick="selectTiramisuKilos(2, this)">2 Kilos (12–16 porciones)</button>
+              <button class="kilo-btn" onclick="selectTiramisuKilos(3, this)">3+ Kilos (Eventos)</button>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+              <a href="#cotizador" class="btn btn-gold" onclick="preselectQuote('Tiramisú Italiano Tradizionale')" data-i18n="menu.tiramisu.orderBtn">Pedir Tiramisú</a>
+              <button class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255, 255, 255, 0.4);" onclick="openAnatomyModal('tiramisu')" data-i18n="menu.viewRecipe">Ficha Técnica & Maridaje</button>
+            </div>
+          </div>
+
+          <div class="spotlight-image-box">
+            <img src="assets/italian_tiramisu.jpg" alt="Tiramisú auténtico italiano servido en copa de cristal con moka" loading="lazy">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PRODUCT CARDS GRID (DONUTELIER STYLE) -->
+      <div class="menu-grid" id="menuGrid">
+        
+        <!-- Product 1: Ramo de Donuts -->
+        <div class="product-card" data-category="ramos">
+          <div class="product-image-wrap">
+            <img src="assets/donut_bouquet.jpg" alt="Ramo de Donuts Artesanales" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-category" data-i18n="card.ramos">Ramos & Regalos</span>
+            <h4 class="product-name" data-i18n="card.p1Name">Ramo de Donuts "L'Amour"</h4>
+            <p class="product-snippet" data-i18n="card.p1Snippet">Arreglo floral comestible con 7 donuts glaseados, rosas comestibles, lluvia de pistacho y baby's breath.</p>
+            <div class="product-card-footer">
+              <span class="product-price-note" data-i18n="card.customQuote">Cotización personalizada</span>
+              <button class="btn-anatomy" onclick="openAnatomyModal('ramo_lamour')">
+                <span data-i18n="card.anatomy">Anatomía</span> &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Desayuno Dulce Amor -->
+        <div class="product-card" data-category="ramos">
+          <div class="product-image-wrap">
+            <img src="assets/gift_box_tray.jpg" alt="Bandeja de Desayuno con Vino y Donuts" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-category" data-i18n="card.ramos">Ramos & Regalos</span>
+            <h4 class="product-name" data-i18n="card.p2Name">Bandeja Desayuno "Dulce Amor"</h4>
+            <p class="product-snippet" data-i18n="card.p2Snippet">Bandeja de madera maciza, 5 donuts gourmet, espumoso mini, taza artesanal y ramo de rosas naturales.</p>
+            <div class="product-card-footer">
+              <span class="product-price-note" data-i18n="card.customQuote">Cotización personalizada</span>
+              <button class="btn-anatomy" onclick="openAnatomyModal('bandeja_desayuno')">
+                <span data-i18n="card.anatomy">Anatomía</span> &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Caja Floral Alargada -->
+        <div class="product-card" data-category="cajas">
+          <div class="product-image-wrap">
+            <img src="assets/floral_donut_box.jpg" alt="Caja Alargada con Donuts y Eucalipto" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-category" data-i18n="card.cajas">Cajas de Donuts</span>
+            <h4 class="product-name" data-i18n="card.p3Name">Caja Floral Alargada</h4>
+            <p class="product-snippet" data-i18n="card.p3Snippet">Presentación horizontal de lujo con 10 donuts en tonos pastel, follaje de eucalipto fresco y lazo de terciopelo.</p>
+            <div class="product-card-footer">
+              <span class="product-price-note" data-i18n="card.customQuote">Cotización personalizada</span>
+              <button class="btn-anatomy" onclick="openAnatomyModal('caja_floral')">
+                <span data-i18n="card.anatomy">Anatomía</span> &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Torta Vintage Heart -->
+        <div class="product-card" data-category="eventos">
+          <div class="product-image-wrap">
+            <img src="assets/vintage_heart_cake.jpg" alt="Torta en forma de corazón con volantes" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-category" data-i18n="card.eventos">Eventos & Tortas</span>
+            <h4 class="product-name" data-i18n="card.p4Name">Torta Vintage Heart Lambeth</h4>
+            <p class="product-snippet" data-i18n="card.p4Snippet">Torta en forma de corazón con decoración clásica victoriana, ruffles de buttercream y cerezas confitadas.</p>
+            <div class="product-card-footer">
+              <span class="product-price-note" data-i18n="card.customQuote">Cotización personalizada</span>
+              <button class="btn-anatomy" onclick="openAnatomyModal('vintage_cake')">
+                <span data-i18n="card.anatomy">Anatomía</span> &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: Torre de Donuts Monumental -->
+        <div class="product-card" data-category="eventos">
+          <div class="product-image-wrap">
+            <img src="assets/donut_tower_event.jpg" alt="Torre pirámide de donuts para eventos" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-category" data-i18n="card.eventos">Eventos & Tortas</span>
+            <h4 class="product-name" data-i18n="card.p5Name">Torre Monumental de Donuts</h4>
+            <p class="product-snippet" data-i18n="card.p5Snippet">Pirámide de 4 a 7 niveles con donuts temáticos, macarons franceses y follaje natural para bodas y cumpleaños.</p>
+            <div class="product-card-footer">
+              <span class="product-price-note" data-i18n="card.customQuote">Cotización personalizada</span>
+              <button class="btn-anatomy" onclick="openAnatomyModal('donut_tower')">
+                <span data-i18n="card.anatomy">Anatomía</span> &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Caja Clásica x6 -->
+        <div class="product-card" data-category="cajas">
+          <div class="product-image-wrap">
+            <img src="assets/hero_pastry_art.jpg" alt="Caja Clásica de 6 Donuts Artesanales" loading="lazy">
+          </div>
+          <div class="product-card-body">
+            <span class="product-category" data-i18n="card.cajas">Cajas de Donuts</span>
+            <h4 class="product-name" data-i18n="card.p6Name">Petite Box x6 Artesanal</h4>
+            <p class="product-snippet" data-i18n="card.p6Snippet">La selección perfecta para compartir: 6 sabores emblemáticos con glaseado brillante y oro comestible.</p>
+            <div class="product-card-footer">
+              <span class="product-price-note" data-i18n="card.customQuote">Cotización personalizada</span>
+              <button class="btn-anatomy" onclick="openAnatomyModal('petite_box')">
+                <span data-i18n="card.anatomy">Anatomía</span> &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. "EVENTOS & GALERÍA" — BENTO MEDIA GRID (SOCIAL GOODS STYLE)
+       ========================================================================== -->
+  <section class="gallery-section section-pad" id="galeria">
+    <div class="container">
+      
+      <div class="text-center">
+        <span class="eyebrow" data-i18n="gallery.eyebrow">Momentos Inolvidables</span>
+        <h2 class="section-title" data-i18n="gallery.title">Eventos & Galería Editorial</h2>
+        <p class="section-subtitle" data-i18n="gallery.subtitle">
+          Una mirada íntima a nuestras creaciones para cumpleaños, aniversarios, baby showers y celebraciones exclusivas en Cali.
+        </p>
+      </div>
+
+      <!-- Asymmetrical Bento Grid -->
+      <div class="bento-grid">
+        
+        <!-- Bento 1: Large Event Tower Feature -->
+        <div class="bento-item bento-item-large" onclick="openLightbox('assets/donut_tower_event.jpg', 'Torre Monumental para Cumpleaños en Cali')">
+          <img src="assets/donut_tower_event.jpg" alt="Torre de Donuts para Evento Especial" loading="lazy">
+          <div class="bento-overlay">
+            <span class="bento-tag" data-i18n="bento.events">Eventos Exclusivos</span>
+            <h3 class="bento-title" data-i18n="bento.tower">Torres de Donuts de Alto Impacto</h3>
+          </div>
+        </div>
+
+        <!-- Bento 2: Vertical 9:16 Short Video / Reel Style -->
+        <div class="bento-item bento-item-vertical" onclick="openLightbox('assets/reel_piping_pastry.jpg', 'Reel: Baño de Ganache & Pistacho en Cámara Lenta')">
+          <span class="reel-badge">
+            <span class="reel-pulse"></span>
+            REEL 9:16
+          </span>
+          <img src="assets/reel_piping_pastry.jpg" alt="Video Reel preparando donut con pistacho" loading="lazy">
+          <div class="bento-overlay">
+            <span class="bento-tag" data-i18n="bento.behindScenes">En el Obrador</span>
+            <h3 class="bento-title" data-i18n="bento.reelTitle">Glaseados y Texturas al Minuto</h3>
+          </div>
+        </div>
+
+        <!-- Bento 3: Vintage Lambeth Heart Cake -->
+        <div class="bento-item bento-item-wide" onclick="openLightbox('assets/vintage_heart_cake.jpg', 'Torta Vintage Heart con Volantes Victoriana')">
+          <img src="assets/vintage_heart_cake.jpg" alt="Torta Vintage en forma de corazón con cerezas" loading="lazy">
+          <div class="bento-overlay">
+            <span class="bento-tag" data-i18n="bento.customCakes">Pastelería de Autor</span>
+            <h3 class="bento-title" data-i18n="bento.vintageCake">Tortas Vintage con Volantes de Buttercream</h3>
+          </div>
+        </div>
+
+        <!-- Bento 4: Donut Bouquet -->
+        <div class="bento-item bento-item-standard" onclick="openLightbox('assets/donut_bouquet.jpg', 'Ramo de Donuts de Diseño Envuelto en Seda')">
+          <img src="assets/donut_bouquet.jpg" alt="Ramo de donuts de regalo" loading="lazy">
+          <div class="bento-overlay">
+            <span class="bento-tag" data-i18n="bento.bouquets">Regalos Románticos</span>
+            <h3 class="bento-title" data-i18n="bento.bouquetTitle">Ramos de Donuts en Papel Seda</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. "LO QUE DICEN DE NOSOTROS" — TESTIMONIALS
+       ========================================================================== -->
+  <section class="testimonials-section section-pad" id="testimonios">
+    <div class="container">
+      
+      <div class="text-center">
+        <span class="eyebrow" data-i18n="reviews.eyebrow">Voces de Nuestros Clientes</span>
+        <h2 class="section-title" data-i18n="reviews.title">Lo Que Dicen De Nosotros</h2>
+        <p class="section-subtitle" data-i18n="reviews.subtitle">
+          Cada testimonio es el reflejo de la pasión y dedicación que Isabella y Adriana ponen en cada creación.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <span class="quote-icon">“</span>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="reviews.r1Text">
+            "Pedimos una torre de donuts temática de cumpleaños y fue el centro de todas las miradas. ¡Deliciosos y hermosos!"
+          </p>
+          <div class="testimonial-author-box">
+            <span class="author-name">Clara M.</span>
+            <span class="author-tag" data-i18n="reviews.r1Tag">Cumpleaños en Cali</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <span class="quote-icon">“</span>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="reviews.r2Text">
+            "Buscábamos algo original para el baby shower y los ramos de donuts personalizados superaron todas nuestras expectativas."
+          </p>
+          <div class="testimonial-author-box">
+            <span class="author-name">Marcos y Elena</span>
+            <span class="author-tag" data-i18n="reviews.r2Tag">Baby Shower</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <span class="quote-icon">“</span>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="reviews.r3Text">
+            "Poder elegir cada detalle (coberturas, colores, relleno y empaque) hizo que el regalo fuera único. ¡100% recomendadas!"
+          </p>
+          <div class="testimonial-author-box">
+            <span class="author-name">Sara V.</span>
+            <span class="author-tag" data-i18n="reviews.r3Tag">Aniversario Especial</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. "CHEF: ISABELLA Y ADRIANA" — MOTHER & DAUGHTER STORY
+       ========================================================================== -->
+  <section class="story-section section-pad" id="historia">
+    <div class="container">
+      
+      <div class="story-grid">
+        
+        <!-- Portrait Column -->
+        <div class="story-image-wrap">
+          <img src="assets/chefs_isabella_adriana.jpg" alt="Isabella y Adriana, Fundadoras y Pasteleras de Dulce Testimonio Cali" loading="lazy">
+          <div class="story-frame-accent"></div>
+        </div>
+
+        <!-- Story Text Column -->
+        <div class="story-content">
+          <span class="eyebrow" data-i18n="story.eyebrow">Nuestras Creadoras</span>
+          <h2 class="section-title" data-i18n="story.title">Isabella y Adriana</h2>
+          
+          <div class="story-signatures">
+            <span class="signature-name">Isabella</span>
+            <span class="signature-divider"></span>
+            <span class="signature-name">Adriana</span>
+          </div>
+
+          <div class="story-paragraphs">
+            <p data-i18n="story.p1">
+              El deseo de una mamá y el amor de una hija se mezclan para crear Dulce Testimonio, tu referente de los mejores dulces en Cali.
+            </p>
+            <p data-i18n="story.p2">
+              Desarrollando nuevos sabores y nuevas ideas, pero siempre con el mismo amor que une a una madre y su hija. Desde nuestros viajes por Europa perfeccionando la receta del tiramisú tradicional hasta cada glaseado hecho a mano en nuestro taller.
+            </p>
+          </div>
+
+          <div class="story-highlights">
+            <div class="highlight-box">
+              <h4 class="highlight-title" data-i18n="story.h1Title">Recetas de Autor</h4>
+              <p class="highlight-desc" data-i18n="story.h1Desc">Masa brioche con 24h de fermentación y glaseados con ingredientes reales sin conservantes.</p>
+            </div>
+            <div class="highlight-box">
+              <h4 class="highlight-title" data-i18n="story.h2Title">Amor en Cada Detalle</h4>
+              <p class="highlight-desc" data-i18n="story.h2Desc">Cada ramo, caja y lazo es confeccionado individualmente para su destinatario.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pull-Quote Banner Underneath -->
+      <div class="story-pullquote-banner">
+        <blockquote class="pullquote-text" data-i18n="story.quote">
+          "En Dulce Testimonio creemos que la vida es dulce, y por eso dedicamos nuestras fuerzas y tiempo para hacerte probar la dulzura de la vida."
+        </blockquote>
+        <div class="pullquote-author" data-i18n="story.quoteAuthor">— Isabella & Adriana, Dulce Testimonio Cali</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. INTERACTIVE "COTIZA YA / HABLE CON NOSOTROS" (WHATSAPP ORDER BUILDER)
+       ========================================================================== -->
+  <section class="quote-section section-pad" id="cotizador">
+    <div class="container">
+      
+      <div class="text-center">
+        <span class="eyebrow" data-i18n="quote.eyebrow">Cotizador Inteligente</span>
+        <h2 class="section-title" data-i18n="quote.title">Arma tu Cotización Personalizada</h2>
+        <p class="section-subtitle" data-i18n="quote.subtitle">
+          Elige tu producto, combina tus sabores y envíanos tu solicitud directa a nuestro WhatsApp. Te responderemos en minutos con la confirmación de fecha y detalles.
+        </p>
+      </div>
+
+      <div class="quote-builder-wrapper">
+        <div class="quote-layout">
+          
+          <!-- Left Column: Interactive Form Steps -->
+          <div class="builder-steps-col">
+            
+            <!-- Step 1: Product Selection -->
+            <div class="builder-step-block">
+              <span class="step-label" data-i18n="quote.step1">Paso 01</span>
+              <h3 class="step-heading" data-i18n="quote.selectProduct">Selecciona tu Creación:</h3>
+              <div class="selection-grid">
+                
+                <div class="selection-card selected" onclick="selectProductType('caja_donuts', 'Cajas de Donuts', this)">
+                  <span class="selection-card-title" data-i18n="quote.opt1">Cajas de Donuts</span>
+                  <span class="selection-card-sub" data-i18n="quote.opt1Sub">Cloud Box x6, x12 o Floral</span>
+                </div>
+
+                <div class="selection-card" onclick="selectProductType('ramo_donuts', 'Ramos de Donuts', this)">
+                  <span class="selection-card-title" data-i18n="quote.opt2">Ramo de Donuts</span>
+                  <span class="selection-card-sub" data-i18n="quote.opt2Sub">Arreglo floral comestible</span>
+                </div>
+
+                <div class="selection-card" onclick="selectProductType('tiramisu', 'Tiramisú por Kilos', this)">
+                  <span class="selection-card-title" data-i18n="quote.opt3">Tiramisú por Kilos</span>
+                  <span class="selection-card-sub" data-i18n="quote.opt3Sub">Receta tradicional italiana</span>
+                </div>
+
+                <div class="selection-card" onclick="selectProductType('evento_torre', 'Torres & Eventos', this)">
+                  <span class="selection-card-title" data-i18n="quote.opt4">Torres & Eventos</span>
+                  <span class="selection-card-sub" data-i18n="quote.opt4Sub">Bodas, cumpleaños y mesas</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Step 2: Size & Presentation -->
+            <div class="builder-step-block">
+              <span class="step-label" data-i18n="quote.step2">Paso 02</span>
+              <h3 class="step-heading" data-i18n="quote.selectSize">Tamaño o Presentación:</h3>
+              <select class="form-select" id="quoteSizeSelect" onchange="updateQuoteSummary()" style="width: 100%;">
+                <option value="Caja x12 Cloud Box (Recomendada)">Caja x12 Cloud Box con moños y capacillos</option>
+                <option value="Caja x6 Petite Box">Caja x6 Petite Box artesanal</option>
+                <option value="Caja Floral Alargada con Eucalipto">Caja Floral Alargada con Eucalipto y Gypsophila</option>
+                <option value="Ramo Mediano (7 donuts)">Ramo Mediano (7 donuts decorados)</option>
+                <option value="Ramo Deluxe (12 donuts + rosas)">Ramo Deluxe (12 donuts + rosas naturales)</option>
+                <option value="Bandeja Desayuno Completa (con vino y taza)">Bandeja Desayuno Completa (con vino y taza)</option>
+                <option value="Tiramisú 1 Kg (6-8 porciones)">Tiramisú 1 Kg (6-8 porciones)</option>
+                <option value="Tiramisú 2 Kg (12-16 porciones)">Tiramisú 2 Kg (12-16 porciones)</option>
+                <option value="Torre de Donuts para Evento (40+ unidades)">Torre de Donuts para Evento (40+ unidades)</option>
+                <option value="Torta Vintage Heart Lambeth">Torta Vintage Heart Lambeth</option>
+              </select>
+            </div>
+
+            <!-- Step 3: Flavors & Palette -->
+            <div class="builder-step-block">
+              <span class="step-label" data-i18n="quote.step3">Paso 03</span>
+              <h3 class="step-heading" data-i18n="quote.selectFlavors">Sabores y Paleta de Color:</h3>
+              <div class="flavor-badges-wrap" id="quoteFlavorsWrap">
+                <span class="flavor-check-badge checked" onclick="toggleFlavorBadge(this, 'Glaseado Clásico Vainilla')">Glaseado Clásico</span>
+                <span class="flavor-check-badge checked" onclick="toggleFlavorBadge(this, 'Chocolate Belga')">Chocolate Belga</span>
+                <span class="flavor-check-badge" onclick="toggleFlavorBadge(this, 'Frutos Rojos & Pistacho')">Frutos Rojos & Pistacho</span>
+                <span class="flavor-check-badge" onclick="toggleFlavorBadge(this, 'Caramelo Salado')">Caramelo Salado</span>
+                <span class="flavor-check-badge" onclick="toggleFlavorBadge(this, 'Nutella & Avellanas')">Nutella & Avellanas</span>
+                <span class="flavor-check-badge" onclick="toggleFlavorBadge(this, 'Edición Especial de Temporada')">Edición Especial ❤️</span>
+              </div>
+            </div>
+
+            <!-- Step 4: Contact & Date Details -->
+            <div class="builder-step-block">
+              <span class="step-label" data-i18n="quote.step4">Paso 04</span>
+              <h3 class="step-heading" data-i18n="quote.orderDetails">Detalles de Entrega:</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="clientName" data-i18n="quote.nameLabel">Tu Nombre Completo:</label>
+                  <input type="text" class="form-input" id="clientName" placeholder="Ej: Valentina Morales" oninput="updateQuoteSummary()">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="orderDate" data-i18n="quote.dateLabel">Fecha Requerida:</label>
+                  <input type="date" class="form-input" id="orderDate" onchange="updateQuoteSummary()">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="orderNotes" data-i18n="quote.notesLabel">Mensaje de Dedicatoria o Detalles Especiales:</label>
+                <textarea class="form-textarea" id="orderNotes" rows="3" placeholder="Ej: Tarjeta de feliz cumpleaños para mi mamá, colores lilas y crema..." oninput="updateQuoteSummary()"></textarea>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Live Order Summary Card -->
+          <div class="summary-col">
+            <div class="order-summary-card">
+              <div class="summary-header">
+                <span class="eyebrow" style="margin-bottom: 4px;" data-i18n="summary.eyebrow">Resumen En Vivo</span>
+                <h3 class="summary-title" data-i18n="summary.title">Tu Pedido Dulce</h3>
+              </div>
+
+              <div class="summary-items-list">
+                <div class="summary-row">
+                  <span data-i18n="summary.itemProduct">Creación:</span>
+                  <strong id="summaryProduct">Cajas de Donuts</strong>
+                </div>
+                <div class="summary-row">
+                  <span data-i18n="summary.itemSize">Presentación:</span>
+                  <strong id="summarySize">Caja x12 Cloud Box</strong>
+                </div>
+                <div class="summary-row">
+                  <span data-i18n="summary.itemFlavors">Sabores:</span>
+                  <strong id="summaryFlavors">Glaseado Clásico, Chocolate Belga</strong>
+                </div>
+                <div class="summary-row">
+                  <span data-i18n="summary.itemDate">Fecha:</span>
+                  <strong id="summaryDate">Por definir</strong>
+                </div>
+                <div class="summary-row">
+                  <span data-i18n="summary.itemLocation">Destino:</span>
+                  <strong>Cali, Colombia</strong>
+                </div>
+              </div>
+
+              <!-- Primary WhatsApp Action -->
+              <button class="whatsapp-dispatch-btn" onclick="sendOrderViaWhatsApp()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.53 1.771.82 2.791.82 3.181 0 5.768-2.587 5.768-5.768.001-3.18-2.585-5.804-5.768-5.804zm4.276 8.243c-.179.502-.897.917-1.246.967-.348.05-.79.088-2.285-.533-1.802-.751-2.946-2.586-3.036-2.705-.09-.119-.728-.967-.728-1.844 0-.877.462-1.309.626-1.488.164-.179.358-.224.477-.224.119 0 .239.001.343.006.109.005.253-.042.395.299.149.359.508 1.238.553 1.328.045.09.075.194.015.313-.06.12-.09.194-.179.299-.09.104-.189.233-.27.313-.09.09-.184.188-.079.368.104.179.464.767 1.002 1.246.692.617 1.276.808 1.455.897.179.09.284.075.388-.045.105-.119.448-.522.568-.701.119-.179.239-.149.398-.09.16.06.996.47 1.168.556.172.086.287.13.33.204.043.074.043.432-.136.934zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.176L2 22l4.981-1.308A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.172c-1.636 0-3.15-.494-4.423-1.341l-.317-.212-2.97.777.793-2.899-.232-.37C4.018 14.869 3.5 13.488 3.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5-3.813 8.172-8.5 8.172z"/>
+                </svg>
+                <span data-i18n="summary.sendWhatsApp">Enviar por WhatsApp</span>
+              </button>
+
+              <div class="direct-channels-row">
+                <a href="https://wa.me/573151234567" target="_blank" rel="noopener" class="direct-channel-btn" id="directWhatsAppBtn">
+                  <span>💬 Hable con Nosotros</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="direct-channel-btn" id="directInstagramBtn">
+                  <span>📷 Instagram</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. FOOTER SECTION
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Bio -->
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="monogram-badge">DT</div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: #FFFFFF;">Dulce Testimonio</span>
+              <span class="brand-sub">Repostería Personalizada</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer.desc">
+            Fundado con devoción y visión por Isabella y Adriana en Cali, Colombia. Especialistas en donuts de diseño, ramos de donuts de lujo, auténtico tiramisú italiano y mesas de postres para eventos de ensueño.
+          </p>
+          <div class="badge badge-gold">📍 Cali, Valle del Cauca</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footer.linksTitle">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio" class="footer-link" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="#menu" class="footer-link" data-i18n="nav.menu">Nuestros Dulces</a></li>
+            <li><a href="#galeria" class="footer-link" data-i18n="nav.events">Eventos & Galería</a></li>
+            <li><a href="#historia" class="footer-link" data-i18n="nav.chefs">Isabella & Adriana</a></li>
+            <li><a href="#cotizador" class="footer-link" data-i18n="nav.cta">Cotizador WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <!-- Policies & Hours -->
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footer.hoursTitle">Horarios & Pedidos</h4>
+          <ul class="footer-links-list">
+            <li class="footer-contact-item">
+              <span>🕒 Lun - Sáb: 8:00 AM - 6:00 PM</span>
+            </li>
+            <li class="footer-contact-item">
+              <span>📅 Pedidos con 48h de anticipación</span>
+            </li>
+            <li class="footer-contact-item">
+              <span>🛵 Envíos en toda el área de Cali</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footer.contactTitle">Hable con Nosotras</h4>
+          <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.75); margin-bottom: 14px;" data-i18n="footer.contactSubtitle">
+            ¿Tienes una fecha especial en mente? Escríbenos directamente:
+          </p>
+          <a href="#cotizador" class="btn btn-gold btn-sm" style="width: 100%; margin-bottom: 10px;" data-i18n="hero.ctaPrimary">Cotiza Ya</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%;" id="footerInstaBtn">@dulcetestimonio_</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Dulce Testimonio — Repostería Personalizada. Todos los derechos reservados.</span>
+        <span>Hecho con amor en Cali, Colombia ❤️</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       11. FLOATING THEME & COLOR CUSTOMIZER DRAWER (BOTTOM-LEFT)
+       ========================================================================== -->
+  <button class="theme-customizer-toggle" id="themeCustomizerToggle" onclick="toggleCustomizerDrawer()" aria-label="Abrir personalizador de temas y colores">
+    <span class="theme-palette-icon">🎨</span>
+    <span data-i18n="theme.btnLabel">Personalizar Colores</span>
+  </button>
+
+  <div class="customizer-drawer" id="customizerDrawer">
+    <div class="customizer-header">
+      <h4 class="customizer-title" data-i18n="theme.drawerTitle">Paletas & Estilos</h4>
+      <button class="customizer-close" onclick="toggleCustomizerDrawer()" aria-label="Cerrar personalizador">✕</button>
+    </div>
+
+    <!-- 4 Preset Palette Buttons -->
+    <div class="customizer-section-title" data-i18n="theme.presetsTitle">Paletas Preestablecidas</div>
+    <div class="presets-grid">
+      
+      <!-- Preset 1: Dulce Mauve & Cream -->
+      <button class="preset-btn active" onclick="applyPreset('default', this)">
+        <span class="preset-name">Dulce Mauve & Cream</span>
+        <div class="preset-dots">
+          <span class="color-dot" style="background: #6E3B68;"></span>
+          <span class="color-dot" style="background: #F2E4EE;"></span>
+          <span class="color-dot" style="background: #D4AF37;"></span>
+          <span class="color-dot" style="background: #231922;"></span>
+        </div>
+      </button>
+
+      <!-- Preset 2: Melt Espresso & Brioche -->
+      <button class="preset-btn" onclick="applyPreset('melt', this)">
+        <span class="preset-name">Melt Espresso & Brioche</span>
+        <div class="preset-dots">
+          <span class="color-dot" style="background: #3D2314;"></span>
+          <span class="color-dot" style="background: #F4E7D5;"></span>
+          <span class="color-dot" style="background: #C88647;"></span>
+          <span class="color-dot" style="background: #1E120A;"></span>
+        </div>
+      </button>
+
+      <!-- Preset 3: Donutelier Blush & Pistachio -->
+      <button class="preset-btn" onclick="applyPreset('donutelier', this)">
+        <span class="preset-name">Donutelier Blush & Pistachio</span>
+        <div class="preset-dots">
+          <span class="color-dot" style="background: #3F533E;"></span>
+          <span class="color-dot" style="background: #F9E8E6;"></span>
+          <span class="color-dot" style="background: #D98880;"></span>
+          <span class="color-dot" style="background: #20241F;"></span>
+        </div>
+      </button>
+
+      <!-- Preset 4: Editorial Monochrome -->
+      <button class="preset-btn" onclick="applyPreset('monochrome', this)">
+        <span class="preset-name">Editorial Monochrome</span>
+        <div class="preset-dots">
+          <span class="color-dot" style="background: #121212;"></span>
+          <span class="color-dot" style="background: #EBE8E6;"></span>
+          <span class="color-dot" style="background: #C2A264;"></span>
+          <span class="color-dot" style="background: #7F736A;"></span>
+        </div>
+      </button>
+
+    </div>
+
+    <!-- Live Color Pickers -->
+    <div class="customizer-section-title" data-i18n="theme.pickersTitle">Ajuste Fino de Colores Hex</div>
+    <div class="picker-group">
+      
+      <div class="picker-row">
+        <label class="picker-label" for="colorPickerPrimary">Color Primario:</label>
+        <div class="picker-input-wrap">
+          <span class="color-hex-text" id="hexPrimary">#6E3B68</span>
+          <input type="color" class="color-picker-input" id="colorPickerPrimary" value="#6E3B68" oninput="updateColorVar('--primary', this.value, 'hexPrimary')">
+        </div>
+      </div>
+
+      <div class="picker-row">
+        <label class="picker-label" for="colorPickerAccent">Acento / Suave:</label>
+        <div class="picker-input-wrap">
+          <span class="color-hex-text" id="hexAccent">#F2E4EE</span>
+          <input type="color" class="color-picker-input" id="colorPickerAccent" value="#F2E4EE" oninput="updateColorVar('--accent-soft', this.value, 'hexAccent')">
+        </div>
+      </div>
+
+      <div class="picker-row">
+        <label class="picker-label" for="colorPickerGold">Detalles Oro / Acento:</label>
+        <div class="picker-input-wrap">
+          <span class="color-hex-text" id="hexGold">#D4AF37</span>
+          <input type="color" class="color-picker-input" id="colorPickerGold" value="#D4AF37" oninput="updateColorVar('--accent-gold', this.value, 'hexGold')">
+        </div>
+      </div>
+
+      <div class="picker-row">
+        <label class="picker-label" for="colorPickerBg">Fondo General:</label>
+        <div class="picker-input-wrap">
+          <span class="color-hex-text" id="hexBg">#FBF8F6</span>
+          <input type="color" class="color-picker-input" id="colorPickerBg" value="#FBF8F6" oninput="updateColorVar('--bg-primary', this.value, 'hexBg')">
+        </div>
+      </div>
+
+      <div class="picker-row">
+        <label class="picker-label" for="colorPickerText">Texto Oscuro:</label>
+        <div class="picker-input-wrap">
+          <span class="color-hex-text" id="hexText">#231922</span>
+          <input type="color" class="color-picker-input" id="colorPickerText" value="#231922" oninput="updateColorVar('--text-dark', this.value, 'hexText')">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Actions -->
+    <div class="customizer-actions">
+      <button class="copy-css-btn" onclick="copyCssVariables()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span data-i18n="theme.copyBtn">Copiar Variables CSS</span>
+      </button>
+      <button class="reset-theme-btn" onclick="resetThemeDefaults()" data-i18n="theme.resetBtn">Restaurar Original</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       12. INTERACTIVE ANATOMY & FLAVORS MODAL (DONUTELIER STYLE)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="anatomyModalBackdrop" onclick="closeAnatomyModalOnBackdrop(event)">
+    <div class="modal-card" id="anatomyModalCard">
+      <button class="modal-close-btn" onclick="closeAnatomyModal()" aria-label="Cerrar ventana">✕</button>
+      
+      <div class="modal-grid">
+        <div class="modal-media-col">
+          <img src="assets/donuts_cloud_box.jpg" alt="Detalle del producto" id="modalProductImage">
+        </div>
+
+        <div class="modal-body-col">
+          <span class="eyebrow" id="modalCategory" data-i18n="modal.eyebrow">Haute Patisserie</span>
+          <h3 class="section-title" id="modalTitle" style="font-size: 1.85rem; margin-bottom: 8px;">Anatomía del Producto</h3>
+          <p id="modalSnippet" style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6;">Descripción y secretos de elaboración.</p>
+
+          <div class="anatomy-list" id="modalAnatomyList">
+            <!-- Dynamic Anatomy Rows -->
+          </div>
+
+          <div style="margin-top: auto; display: flex; gap: 12px;">
+            <a href="#cotizador" class="btn btn-primary btn-sm" onclick="closeAnatomyModal()" data-i18n="modal.quoteBtn">Cotizar Este Dulce</a>
+            <button class="btn btn-secondary btn-sm" onclick="closeAnatomyModal()" data-i18n="modal.closeBtn">Volver</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       13. LIGHTBOX MODAL FOR GALLERY
+       ========================================================================== -->
+  <div class="lightbox-modal" id="galleryLightbox" onclick="closeLightbox(event)">
+    <button class="modal-close-btn" style="color: #FFFFFF; background: rgba(255,255,255,0.2);" onclick="closeLightbox()">✕</button>
+    <div class="lightbox-container" onclick="event.stopPropagation()">
+      <img src="" alt="Vista ampliada" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice">
+    <span>✨</span>
+    <span id="toastMessage">¡Variables CSS copiadas al portapapeles!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
